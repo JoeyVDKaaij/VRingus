@@ -5,13 +5,15 @@ public class ObstacleSpawner : MonoBehaviour
     [Header("Spawner Settings")]
     [SerializeField, Tooltip("Sets which GameObjects it should spawn.")]
     private GameObject[] obstacles = null;
+    [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns tjhe first new GameObject.")]
+    private float startingSpawnDelay;
     [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns a new GameObject.")]
     private float spawnRate;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnRandomObject", spawnRate, spawnRate);
+        StartSpawningObjects();
     }
 
     // Update is called once per frame
@@ -25,5 +27,15 @@ public class ObstacleSpawner : MonoBehaviour
         {
             Debug.LogWarning("No GameObjects found in GameObject Array");
         }
+    }
+
+    void StartSpawningObjects()
+    {
+        InvokeRepeating("SpawnRandomObject", startingSpawnDelay, spawnRate);
+    }
+
+    void StopSpawningObjects()
+    {
+        CancelInvoke("SpawnRandomObject");
     }
 }

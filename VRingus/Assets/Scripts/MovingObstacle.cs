@@ -22,13 +22,13 @@ public class MovingObstacle : MonoBehaviour
         switch (direction) 
         {
             case Direction.x:
-                transform.position += new Vector3(Time.deltaTime * movementSpeed, 0, 0);
+                transform.Translate(new Vector3(Time.deltaTime * movementSpeed, 0, 0));
                 break;
             case Direction.y:
-                transform.position += new Vector3(0, Time.deltaTime * movementSpeed, 0);
+                transform.Translate(new Vector3(0, Time.deltaTime * movementSpeed, 0));
                 break;
             case Direction.z:
-                transform.position += new Vector3(0, 0, Time.deltaTime * movementSpeed);
+                transform.Translate(new Vector3(0, 0, Time.deltaTime * movementSpeed));
                 break;
             default:
                 Debug.LogWarning("Cannot find Enum value.");

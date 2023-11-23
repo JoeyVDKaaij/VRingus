@@ -8,5 +8,9 @@ public class ObstacleDespawner : MonoBehaviour
         {
             Destroy(other.transform.parent.gameObject);
         }
+        if (other.CompareTag("Room"))
+        {
+            Destroy(other.transform.parent.gameObject);
+        }
     }
 }

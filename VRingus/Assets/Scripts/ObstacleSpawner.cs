@@ -5,6 +5,8 @@ public class ObstacleSpawner : MonoBehaviour
     [Header("Spawner Settings")]
     [SerializeField, Tooltip("Sets which GameObjects it should spawn.")]
     private GameObject[] obstacles = null;
+    [SerializeField, Tooltip("Sets room GameObjects that should spawn.")]
+    private GameObject room = null;
     [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns tjhe first new GameObject.")]
     private float startingSpawnDelay;
     [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns a new GameObject.")]
@@ -22,6 +24,8 @@ public class ObstacleSpawner : MonoBehaviour
         if (obstacles.Length > 0)
         {
             Instantiate(obstacles[Random.Range(0, obstacles.Length-1)], transform);
+            if (room != null)
+                Instantiate(room, transform);
         }
         else
         {

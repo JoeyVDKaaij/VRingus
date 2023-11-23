@@ -98,5 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 7836688517662921064, guid: aa4ef9e0c11075443b79df5eba8189a5, type: 3}
-  startingSpawnDelay: 0
-  spawnRate: 3.3
+  room: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686, type: 3}
+  startingSpawnDelay: 1
+  spawnRate: 5
+  spawnPositionOffset: {x: 0, y: 8, z: 0}

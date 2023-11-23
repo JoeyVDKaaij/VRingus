@@ -98,4 +98,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 7836688517662921064, guid: aa4ef9e0c11075443b79df5eba8189a5, type: 3}
-  spawnRate: 14.5
+  startingSpawnDelay: 0
+  spawnRate: 3.3

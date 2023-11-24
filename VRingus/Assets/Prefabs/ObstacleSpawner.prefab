@@ -101,4 +101,4 @@ MonoBehaviour:
   room: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686, type: 3}
   startingSpawnDelay: 1
   spawnRate: 5
-  spawnPositionOffset: {x: 0, y: 8, z: 0}
+  spawnPositionOffset: {x: 0, y: 0, z: 0}

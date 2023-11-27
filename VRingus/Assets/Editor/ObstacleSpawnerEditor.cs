@@ -5,6 +5,8 @@ public class ObstacleSpawnerEditor : Editor
 {
     private SerializedProperty obstacles;
     private SerializedProperty room;
+    private SerializedProperty door;
+    private SerializedProperty doorPositionOffsetProp;
     private SerializedProperty spawnRequirementProp;
     private SerializedProperty startingSpawnDelayProp;
     private SerializedProperty spawnRateProp;
@@ -17,6 +19,8 @@ public class ObstacleSpawnerEditor : Editor
     {
         obstacles = serializedObject.FindProperty("obstacles");
         room = serializedObject.FindProperty("room");
+        door = serializedObject.FindProperty("door");
+        doorPositionOffsetProp = serializedObject.FindProperty("doorPositionOffset");
         spawnRequirementProp = serializedObject.FindProperty("spawnRequirement");
         startingSpawnDelayProp = serializedObject.FindProperty("startingSpawnDelay");
         spawnRateProp = serializedObject.FindProperty("spawnRate");
@@ -35,6 +39,10 @@ public class ObstacleSpawnerEditor : Editor
         SpawnRequirement spawnRequirement = (SpawnRequirement)spawnRequirementProp.enumValueIndex;
         EditorGUILayout.PropertyField(obstacles);
         EditorGUILayout.PropertyField(room);
+        EditorGUILayout.PropertyField(door);
+        
+        if (door.objectReferenceValue != null)
+            EditorGUILayout.PropertyField(doorPositionOffsetProp);
 
         // Check if any element in the array is assigned
         bool anyObjectAssigned = false;
@@ -50,7 +58,7 @@ public class ObstacleSpawnerEditor : Editor
             }
         }
 
-        if (anyObjectAssigned == true && room.objectReferenceValue != null)
+        if (anyObjectAssigned == true && room.objectReferenceValue != null && door.objectReferenceValue != null)
         {
             EditorGUILayout.PropertyField(spawnPositionOffsetProp);
             EditorGUILayout.PropertyField(spawnRequirementProp);
@@ -62,7 +70,10 @@ public class ObstacleSpawnerEditor : Editor
             else if (spawnRequirement == SpawnRequirement.Collision)
             {
                 EditorGUILayout.PropertyField(colliderSizeProp);
-                EditorGUILayout.PropertyField(colliderPositionOffSetProp);
+                if (colliderSizeProp.objectReferenceValue != null)
+                {
+                    EditorGUILayout.PropertyField(colliderPositionOffSetProp);
+                }
                 EditorGUILayout.PropertyField(spawnOnHitProp);
             }
         }

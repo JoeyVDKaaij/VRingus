@@ -10,10 +10,14 @@ public enum SpawnRequirement
 public class ObstacleSpawner : MonoBehaviour
 {
     [Header("GameObject Settings")]
-    [SerializeField, Tooltip("Sets which GameObjects it should spawn. (MANDATORY)")]
+    [SerializeField, Tooltip("Sets obstacle GameObjects it should spawn. (MANDATORY)")]
     private GameObject[] obstacles = null;
     [SerializeField, Tooltip("Sets room GameObjects that should spawn. (MANDATORY)")]
     private GameObject room = null;
+    [SerializeField, Tooltip("Sets door GameObjects that should spawn. (MANDATORY)")]
+    private GameObject door = null;
+    [SerializeField, Tooltip("Sets the position of the door related to the center of the spawner. (Set this before playing)")]
+    private Vector3 doorPositionOffset = new Vector3(0,0,0);
 
     [Header("Position Settings")]
     [SerializeField, Tooltip("Set the spawnOffSet")]
@@ -62,9 +66,13 @@ public class ObstacleSpawner : MonoBehaviour
         {
             newPosition = initialPosition + spawnPositionOffset;
             transform.position = newPosition;
-            Instantiate(obstacles[Random.Range(0, obstacles.Length-1)], transform);
-            if (room != null)
+            if (obstacles.Length > 0 && room != null && door != null)
+            {
+                Instantiate(obstacles[Random.Range(0, obstacles.Length-1)], transform);
                 Instantiate(room, transform);
+                GameObject gameObject = Instantiate(door, transform);
+                gameObject.transform.position += doorPositionOffset;
+            }
         }
         else
         {

@@ -429,7 +429,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8580966939708041908, guid: e910d5026864e26449442978b322f52f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Room
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6203064601676532671, guid: e910d5026864e26449442978b322f52f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 259305398835846761}
   - component: {fileID: 1564147514894284552}
   - component: {fileID: 9031527744891019633}
-  - component: {fileID: 6039082652053951091}
+  - component: {fileID: 6203064601676532671}
   m_Layer: 0
   m_Name: Ceiling
-  m_TagString: Room
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6039082652053951091
+--- !u!54 &6203064601676532671
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,5 +131,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0

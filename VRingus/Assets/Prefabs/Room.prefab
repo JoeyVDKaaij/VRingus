@@ -325,6 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7554438631714786925}
   - component: {fileID: 210168497604389083}
+  - component: {fileID: 5143268644649756730}
   m_Layer: 0
   m_Name: Room
   m_TagString: Room
@@ -364,8 +365,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ebfd5400c3fd841b2882fc2cae0097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: -9.45
+  movementSpeed: -20
   direction: 2
+--- !u!65 &5143268644649756730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557993078895273809}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.99245, y: 6.361883, z: 47.46119}
+  m_Center: {x: 0.040468693, y: 2.6809416, z: 0.08467007}
 --- !u!1001 &1291158408347748441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -433,6 +455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031527744891019633, guid: e910d5026864e26449442978b322f52f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6203064601676532671, guid: e910d5026864e26449442978b322f52f, type: 3}

@@ -25,7 +25,7 @@ public class ObstacleSpawnerEditor : Editor
         spawnPositionOffsetProp = serializedObject.FindProperty("spawnPositionOffset");
         colliderSizeProp = serializedObject.FindProperty("colliderSize");
         colliderPositionOffSetProp = serializedObject.FindProperty("colliderPositionOffSet");
-        spawnOnHitProp = serializedObject.FindProperty("spawnOnHit");
+        spawnOnHitProp = serializedObject.FindProperty("spawnOnEnter");
     }
 
     public override void OnInspectorGUI()

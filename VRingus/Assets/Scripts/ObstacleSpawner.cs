@@ -26,7 +26,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField, Tooltip("Set the requirement on how the GameObject spawns.")]
     private SpawnRequirement spawnRequirement = SpawnRequirement.Timed;
 
-    [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns tjhe first new GameObject.")]
+    [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns the first new GameObject.")]
     private float startingSpawnDelay = 20f;
     [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns a new GameObject.")]
     private float spawnRate = 1f;
@@ -36,7 +36,12 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField, Tooltip("Sets the offset position of the center of the collider in a gameobject.")]
     private Vector3 colliderPositionOffSet = new Vector3(0,0,0);
     [SerializeField, Tooltip("Set if the GameObject spawns on hit.")]
-    private bool spawnOnHit = false;
+    private bool spawnOnEnter = false;
+
+    private bool canExit = true;
+
+    private int frameCounter = 6;
+
 
     private void Awake()
     {
@@ -63,8 +68,8 @@ public class ObstacleSpawner : MonoBehaviour
         {
             newPosition = initialPosition + spawnPositionOffset;
             transform.position = newPosition;
-            Instantiate(room[Random.Range(0,room.Length-1)], transform);
-            GameObject gameObject = Instantiate(door, transform);
+            Instantiate(room[Random.Range(0,room.Length-1)], transform.position, Quaternion.identity);
+            GameObject gameObject = Instantiate(door, transform.position, Quaternion.identity);
             gameObject.transform.position += doorPositionOffset;
         }
         else
@@ -101,11 +106,17 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Room") && !spawnOnHit && spawnRequirement == SpawnRequirement.Collision) SpawnRandomObject();
+        if (other.CompareTag("Room") && !spawnOnEnter && spawnRequirement == SpawnRequirement.Collision)
+        {
+            SpawnRandomObject();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Room") && spawnOnHit && spawnRequirement == SpawnRequirement.Collision) SpawnRandomObject();
+        if (other.CompareTag("Room") && spawnOnEnter && spawnRequirement == SpawnRequirement.Collision)
+        {
+            SpawnRandomObject();
+        }
     }
 }

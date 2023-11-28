@@ -3,7 +3,6 @@ using UnityEditor;
 [CustomEditor(typeof(ObstacleSpawner))]
 public class ObstacleSpawnerEditor : Editor
 {
-    private SerializedProperty obstacles;
     private SerializedProperty room;
     private SerializedProperty door;
     private SerializedProperty doorPositionOffsetProp;
@@ -17,7 +16,6 @@ public class ObstacleSpawnerEditor : Editor
 
     private void OnEnable()
     {
-        obstacles = serializedObject.FindProperty("obstacles");
         room = serializedObject.FindProperty("room");
         door = serializedObject.FindProperty("door");
         doorPositionOffsetProp = serializedObject.FindProperty("doorPositionOffset");
@@ -37,28 +35,13 @@ public class ObstacleSpawnerEditor : Editor
 
         // Draw default inspector property fields
         SpawnRequirement spawnRequirement = (SpawnRequirement)spawnRequirementProp.enumValueIndex;
-        EditorGUILayout.PropertyField(obstacles);
         EditorGUILayout.PropertyField(room);
         EditorGUILayout.PropertyField(door);
         
         if (door.objectReferenceValue != null)
             EditorGUILayout.PropertyField(doorPositionOffsetProp);
 
-        // Check if any element in the array is assigned
-        bool anyObjectAssigned = false;
-
-        for (int i = 0; i < obstacles.arraySize; i++)
-        {
-            SerializedProperty arrayElement = obstacles.GetArrayElementAtIndex(i);
-
-            if (arrayElement.objectReferenceValue != null)
-            {
-                anyObjectAssigned = true;
-                break;
-            }
-        }
-
-        if (anyObjectAssigned == true && room.objectReferenceValue != null && door.objectReferenceValue != null)
+        if (room.objectReferenceValue != null && door.objectReferenceValue != null)
         {
             EditorGUILayout.PropertyField(spawnPositionOffsetProp);
             EditorGUILayout.PropertyField(spawnRequirementProp);

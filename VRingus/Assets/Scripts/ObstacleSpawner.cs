@@ -10,8 +10,6 @@ public enum SpawnRequirement
 public class ObstacleSpawner : MonoBehaviour
 {
     [Header("GameObject Settings")]
-    [SerializeField, Tooltip("Sets obstacle GameObjects it should spawn. (MANDATORY)")]
-    private GameObject[] obstacles = null;
     [SerializeField, Tooltip("Sets room GameObjects that should spawn. (MANDATORY)")]
     private GameObject room = null;
     [SerializeField, Tooltip("Sets door GameObjects that should spawn. (MANDATORY)")]
@@ -62,17 +60,13 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void SpawnRandomObject()
     {
-        if (obstacles.Length > 0)
+        if (room != null && door != null)
         {
             newPosition = initialPosition + spawnPositionOffset;
             transform.position = newPosition;
-            if (obstacles.Length > 0 && room != null && door != null)
-            {
-                Instantiate(obstacles[Random.Range(0, obstacles.Length-1)], transform);
-                Instantiate(room, transform);
-                GameObject gameObject = Instantiate(door, transform);
-                gameObject.transform.position += doorPositionOffset;
-            }
+            Instantiate(room, transform);
+            GameObject gameObject = Instantiate(door, transform);
+            gameObject.transform.position += doorPositionOffset;
         }
         else
         {

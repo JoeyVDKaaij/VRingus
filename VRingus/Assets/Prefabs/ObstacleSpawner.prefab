@@ -98,14 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199e090dfc44c85418106eda15a14edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 0}
+  room:
+  - {fileID: 0}
   door: {fileID: 0}
-  doorPositionOffset: {x: 0, y: 0, z: 22.5}
+  doorPositionOffset: {x: 0, y: 0, z: 24}
   spawnPositionOffset: {x: 0, y: 0, z: 0}
   spawnRequirement: 1
   startingSpawnDelay: 1
   spawnRate: 5
-  colliderSize: {fileID: 0}
+  colliderSize: {fileID: 6738077228685509687, guid: 6d9541396e0dd744d8153ce9854b7d19,
+    type: 3}
   colliderPositionOffSet: {x: 0, y: 5, z: -23}
   spawnOnHit: 0
 --- !u!65 &6128401071898008841

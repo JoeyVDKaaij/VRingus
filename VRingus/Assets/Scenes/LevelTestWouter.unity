@@ -712,6 +712,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6738077228685509687, guid: 6d9541396e0dd744d8153ce9854b7d19,
         type: 3}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: room.Array.data[0]
+      value: 
+      objectReference: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686,
+        type: 3}
     - target: {fileID: 1360140511045455299, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

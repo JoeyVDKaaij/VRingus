@@ -1,4 +1,3 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public enum SpawnRequirement
@@ -11,7 +10,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
     [Header("GameObject Settings")]
     [SerializeField, Tooltip("Sets room GameObjects that should spawn. (MANDATORY)")]
-    private GameObject room = null;
+    private GameObject[] room = null;
     [SerializeField, Tooltip("Sets door GameObjects that should spawn. (MANDATORY)")]
     private GameObject door = null;
     [SerializeField, Tooltip("Sets the position of the door related to the center of the spawner. (Set this before playing)")]
@@ -60,11 +59,11 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void SpawnRandomObject()
     {
-        if (room != null && door != null)
+        if (room.Length > 0 && door != null)
         {
             newPosition = initialPosition + spawnPositionOffset;
             transform.position = newPosition;
-            Instantiate(room, transform);
+            Instantiate(room[Random.Range(0,room.Length-1)], transform);
             GameObject gameObject = Instantiate(door, transform);
             gameObject.transform.position += doorPositionOffset;
         }

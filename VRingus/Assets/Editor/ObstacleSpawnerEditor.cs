@@ -37,11 +37,24 @@ public class ObstacleSpawnerEditor : Editor
         SpawnRequirement spawnRequirement = (SpawnRequirement)spawnRequirementProp.enumValueIndex;
         EditorGUILayout.PropertyField(room);
         EditorGUILayout.PropertyField(door);
-        
+
+        bool anyObjectAssigned = false;
+
+        for (int i = 0; i < room.arraySize; i++)
+        {
+            SerializedProperty arrayElement = room.GetArrayElementAtIndex(i);
+
+            if (arrayElement.objectReferenceValue != null)
+            {
+                anyObjectAssigned = true;
+                break;
+            }
+        }
+
         if (door.objectReferenceValue != null)
             EditorGUILayout.PropertyField(doorPositionOffsetProp);
 
-        if (room.objectReferenceValue != null && door.objectReferenceValue != null)
+        if (anyObjectAssigned && door.objectReferenceValue != null)
         {
             EditorGUILayout.PropertyField(spawnPositionOffsetProp);
             EditorGUILayout.PropertyField(spawnRequirementProp);

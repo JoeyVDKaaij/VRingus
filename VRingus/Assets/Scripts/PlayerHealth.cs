@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,6 +10,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField, Tooltip("How long the player can't be damaged for.")]
     private float hitDelay = 5;
     private float timer = 0.0f;
+
+    [Header("Death Settings")]
+    [SerializeField, Tooltip("GameObject with the Death Animation.")]
+    private GameObject DeathAnimation = null;
+    private bool deathAnimationStarted = false;
 
     // Update is called once per frame
     void Update()
@@ -30,6 +37,24 @@ public class PlayerHealth : MonoBehaviour
     void GameOver()
     {
         //Game Over Script
-        
+        if (DeathAnimation != null)
+        {
+            DeathAnimation.SetActive(true);
+            PlayableDirector playableDirector = DeathAnimation.GetComponent<PlayableDirector>();
+
+            if (!deathAnimationStarted)
+            {
+                DeathAnimation.GetComponent<PlayableDirector>().Play();
+                deathAnimationStarted = true;
+            }
+            else if (playableDirector.state != PlayState.Playing)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

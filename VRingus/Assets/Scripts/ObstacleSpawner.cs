@@ -26,7 +26,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField, Tooltip("Set the requirement on how the GameObject spawns.")]
     private SpawnRequirement spawnRequirement = SpawnRequirement.Timed;
 
-    [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns the first new GameObject.")]
+    [SerializeField, Range(5, 100), Tooltip("Set how long it should wait until it spawns the first new GameObject.")]
     private float startingSpawnDelay = 20f;
     [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns a new GameObject.")]
     private float spawnRate = 1f;
@@ -39,6 +39,7 @@ public class ObstacleSpawner : MonoBehaviour
     private bool spawnOnEnter = false;
 
     private bool canExit = true;
+    //private StopRoomAdvance checkpoint; //The checkpoint that makes the whole room advance pause
 
     private int frameCounter = 6;
 
@@ -58,6 +59,7 @@ public class ObstacleSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<StopRoomAdvance>();
         StartSpawningObjects();
     }
 
@@ -68,9 +70,9 @@ public class ObstacleSpawner : MonoBehaviour
         {
             newPosition = initialPosition + spawnPositionOffset;
             transform.position = newPosition;
-            Instantiate(room[Random.Range(0,room.Length-1)], transform.position, Quaternion.identity);
-            GameObject gameObject = Instantiate(door, transform.position, Quaternion.identity);
-            gameObject.transform.position += doorPositionOffset;
+            GameObject Room = room[Random.Range(0, room.Length - 1)];
+            Instantiate(Room, transform.position, Quaternion.identity);
+            //checkpoint.AddRoom(Room);
         }
         else
         {

@@ -156,6 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6761373020436896918}
   - component: {fileID: 3835158553014835900}
+  - component: {fileID: -9146321505559188669}
   m_Layer: 0
   m_Name: MovingObstacle
   m_TagString: Obstacle
@@ -193,3 +194,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: -9.45
   direction: 2
+--- !u!114 &-9146321505559188669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836688517662921064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c068539755ac594f8abfb0ea27062e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

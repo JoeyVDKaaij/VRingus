@@ -90,7 +90,7 @@ public class ObstacleSpawner : MonoBehaviour
             //Pre-defined choices
             Room = room[roomCounter];
             roomCounter += 1;
-            Instantiate(Room, transform.position, Quaternion.identity);
+            Instantiate(Room, transform.position + new Vector3(0,0,51.25f), Quaternion.identity);
             #endregion
             //Animator anim = Room.GetComponentInChildren<Animator>();
             //anim.SetTrigger("CloseDoor");

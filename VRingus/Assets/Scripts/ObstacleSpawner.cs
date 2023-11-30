@@ -134,6 +134,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         if (other.CompareTag("Room") && !spawnOnEnter && spawnRequirement == SpawnRequirement.Collision)
         {
+            Debug.Log(other.gameObject);
             SpawnRandomObject();
         }
     }

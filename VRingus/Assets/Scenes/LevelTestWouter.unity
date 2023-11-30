@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -835,12 +835,12 @@ PrefabInstance:
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: room.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: spawnRequirement
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
@@ -852,7 +852,43 @@ PrefabInstance:
         type: 3}
       propertyPath: room.Array.data[1]
       value: 
-      objectReference: {fileID: 3561666633559255430, guid: bd9ffb9003fa11240adc10bc10665c17,
+      objectReference: {fileID: 2314265598639296316, guid: 6be6565d67c6724479c44193d5e05e17,
+        type: 3}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: room.Array.data[2]
+      value: 
+      objectReference: {fileID: 3475635392618526267, guid: 7567340fe1928c644a2a78730044750b,
+        type: 3}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: room.Array.data[3]
+      value: 
+      objectReference: {fileID: 3475635392618526267, guid: 7567340fe1928c644a2a78730044750b,
+        type: 3}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: room.Array.data[4]
+      value: 
+      objectReference: {fileID: 3475635392618526267, guid: 7567340fe1928c644a2a78730044750b,
+        type: 3}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: room.Array.data[5]
+      value: 
+      objectReference: {fileID: 3475635392618526267, guid: 7567340fe1928c644a2a78730044750b,
+        type: 3}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: room.Array.data[6]
+      value: 
+      objectReference: {fileID: 3475635392618526267, guid: 7567340fe1928c644a2a78730044750b,
+        type: 3}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: room.Array.data[7]
+      value: 
+      objectReference: {fileID: 3475635392618526267, guid: 7567340fe1928c644a2a78730044750b,
         type: 3}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
@@ -871,9 +907,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
+      propertyPath: randomSet1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
       propertyPath: spawnPositionOffset.y
       value: -0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: randomSet1.Array.data[0]
+      value: 
+      objectReference: {fileID: 3475635392618526267, guid: 7567340fe1928c644a2a78730044750b,
+        type: 3}
     - target: {fileID: 1360140511045455299, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

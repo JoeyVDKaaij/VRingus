@@ -91,7 +91,8 @@ public class ObstacleSpawner : MonoBehaviour
             else
             {
                 Room = room[roomCounter];
-                roomCounter++;
+                roomCounter += 1;
+                //randomSpawn = true;
             }
             Instantiate(Room, transform.position, Quaternion.identity);
             #endregion

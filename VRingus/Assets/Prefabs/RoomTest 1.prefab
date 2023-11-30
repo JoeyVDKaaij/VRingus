@@ -366,8 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ebfd5400c3fd841b2882fc2cae0097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: -5
-  direction: 2
+  obstacleSettings: {fileID: 11400000, guid: d58d1c58b8026e24f9e57aaf43bcf837, type: 2}
+  targetPositionOffset: {x: 0, y: 0, z: 0}
+  stoppingDistance: 5
+  finalRoom: 0
 --- !u!1 &6888718951417669993
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,9 +4,9 @@ public class WallHit : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("MainCamera"))
         {
-            other.GetComponent<PlayerHealth>().HitPlayer();
+            other.GetComponentInChildren<PlayerHealth>().HitPlayer();
         }
     }
 }

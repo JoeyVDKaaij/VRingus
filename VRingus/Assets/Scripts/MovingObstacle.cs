@@ -54,7 +54,6 @@ public class MovingObstacle : MonoBehaviour
     {
         target.position = transform.position + targetPositionOffset;
         float distance = Vector3.Distance(player.position, target.position);
-        Debug.Log(distance < stoppingDistance);
         if (!isAtCheckpoint && !finalRoom || !isAtCheckpoint && distance < stoppingDistance && finalRoom && !stopping)
         {
             switch (obstacleSettings.direction)

@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (health == 0)
+        if (health <= 0)
             GameOver();
     }
 

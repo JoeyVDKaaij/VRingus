@@ -51,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6189299834372843117}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -99,17 +99,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room:
-  - {fileID: 0}
-  door: {fileID: 0}
-  doorPositionOffset: {x: 0, y: 0, z: 24}
-  spawnPositionOffset: {x: 0, y: 0, z: 0}
+  - {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686, type: 3}
+  - {fileID: 3535941687332135973, guid: dcc2751bf93fe7b4f996006deb0ab4a0, type: 3}
+  - {fileID: 2314265598639296316, guid: 6be6565d67c6724479c44193d5e05e17, type: 3}
+  spawnPositionOffset: {x: 0, y: -0.75, z: 0}
   spawnRequirement: 1
   startingSpawnDelay: 1
   spawnRate: 5
   colliderSize: {fileID: 6738077228685509687, guid: 6d9541396e0dd744d8153ce9854b7d19,
     type: 3}
   colliderPositionOffSet: {x: 0, y: 5, z: -23}
-  spawnOnHit: 0
+  spawnOnEnter: 0
+  randomSet1: []
+  randomSet2: []
 --- !u!65 &6128401071898008841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154,7 +156,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

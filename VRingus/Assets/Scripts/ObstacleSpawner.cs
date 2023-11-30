@@ -92,8 +92,8 @@ public class ObstacleSpawner : MonoBehaviour
             roomCounter += 1;
             Instantiate(Room, transform.position, Quaternion.identity);
             #endregion
-            Animator anim = Room.GetComponentInChildren<Animator>();
-            anim.SetTrigger("CloseDoor");
+            //Animator anim = Room.GetComponentInChildren<Animator>();
+            //anim.SetTrigger("CloseDoor");
             //checkpoint.AddRoom(Room);
         }
         else

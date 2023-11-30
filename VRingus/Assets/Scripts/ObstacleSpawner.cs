@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum SpawnRequirement
@@ -11,10 +12,6 @@ public class ObstacleSpawner : MonoBehaviour
     [Header("GameObject Settings")]
     [SerializeField, Tooltip("Sets room GameObjects that should spawn. (MANDATORY)")]
     private GameObject[] room = null;
-    [SerializeField, Tooltip("Sets door GameObjects that should spawn. (MANDATORY)")]
-    private GameObject door = null;
-    [SerializeField, Tooltip("Sets the position of the door related to the center of the spawner. (Set this before playing)")]
-    private Vector3 doorPositionOffset = new Vector3(0,0,0);
 
     [Header("Position Settings")]
     [SerializeField, Tooltip("Set the spawnOffSet")]
@@ -34,9 +31,21 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField, Tooltip("Sets the size of the spawner collider with the size of a gameobject.")]
     private MeshRenderer colliderSize = null;
     [SerializeField, Tooltip("Sets the offset position of the center of the collider in a gameobject.")]
-    private Vector3 colliderPositionOffSet = new Vector3(0,0,0);
+    private Vector3 colliderPositionOffSet = new Vector3(0, 0, 0);
     [SerializeField, Tooltip("Set if the GameObject spawns on hit.")]
     private bool spawnOnEnter = false;
+
+    [Header("The first set of random rooms")]
+    [SerializeField] private GameObject[] randomSet1 = null;
+
+    [Header("The second set of random rooms")]
+    [SerializeField] private GameObject[] randomSet2 = null;
+
+    //This variable keeps track of which room should be spawned
+    private int roomCounter = 0;
+
+    private bool randomSpawn = false;
+    private int randomSetCounter = 0;
 
     private bool canExit = true;
     //private StopRoomAdvance checkpoint; //The checkpoint that makes the whole room advance pause
@@ -66,16 +75,39 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void SpawnRandomObject()
     {
-        if (room.Length > 0 && door != null)
+        if (room.Length > 0 && roomCounter <= room.Length - 1)
         {
-            newPosition = initialPosition + spawnPositionOffset;
-            transform.position = newPosition;
-            GameObject Room = room[Random.Range(0, room.Length - 1)];
+            GameObject Room = null;
+            #region RandomRoom
+            //Random room choice
+            if(randomSpawn == true)
+            {
+                if (randomSetCounter % 2 == 0)
+                {
+                    Room = randomSet1[Random.Range(0, randomSet1.Length - 1)];
+                    randomSetCounter += 1;
+                }
+            }
+            #endregion
+            #region Pre-defined
+            //Pre-defined choices
+            else
+            {
+                Room = room[roomCounter];
+                roomCounter += 1;
+                randomSpawn = true;
+            }
             Instantiate(Room, transform.position, Quaternion.identity);
+            randomSpawn = false;
+            #endregion
+            Animator anim = Room.GetComponentInChildren<Animator>();
+            anim.SetTrigger("CloseDoor");
             //checkpoint.AddRoom(Room);
         }
         else
         {
+            if (roomCounter > room.Length - 1)
+                return;
             Debug.LogWarning("No GameObjects found in GameObject Array");
         }
     }

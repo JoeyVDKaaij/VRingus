@@ -36,7 +36,6 @@ public class ObstacleSpawnerEditor : Editor
         // Draw default inspector property fields
         SpawnRequirement spawnRequirement = (SpawnRequirement)spawnRequirementProp.enumValueIndex;
         EditorGUILayout.PropertyField(room);
-        EditorGUILayout.PropertyField(door);
 
         bool anyObjectAssigned = false;
 
@@ -51,10 +50,7 @@ public class ObstacleSpawnerEditor : Editor
             }
         }
 
-        if (door.objectReferenceValue != null)
-            EditorGUILayout.PropertyField(doorPositionOffsetProp);
-
-        if (anyObjectAssigned && door.objectReferenceValue != null)
+        if (anyObjectAssigned)
         {
             EditorGUILayout.PropertyField(spawnPositionOffsetProp);
             EditorGUILayout.PropertyField(spawnRequirementProp);

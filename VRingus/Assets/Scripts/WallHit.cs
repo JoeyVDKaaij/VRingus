@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class WallHit : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {

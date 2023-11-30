@@ -76,24 +76,20 @@ public class ObstacleSpawner : MonoBehaviour
     {
         if (room.Length > 0 && roomCounter <= room.Length - 1)
         {
-            GameObject Room = null;
-            RandomizeScript randomRoom = room[roomCounter].GetComponent<RandomizeScript>();
+            GameObject Room;
+            // randomRoom = room[roomCounter].GetComponent<RandomizeScript>();
             #region RandomRoom
             //Random room choice
-            if (room[roomCounter].GetComponent<RandomizeScript>() == null)
-            {
-                Room = randomRoom.room[Random.Range(0,randomRoom.room.Length-1)];
-                roomCounter++;
-            }
+            //if (room[roomCounter].GetComponent<RandomizeScript>() == null)
+            //{
+            //    Room = randomRoom.room[Random.Range(0,randomRoom.room.Length-1)];
+            //    roomCounter++;
+            //}
             #endregion
             #region Pre-defined
             //Pre-defined choices
-            else
-            {
-                Room = room[roomCounter];
-                roomCounter += 1;
-                //randomSpawn = true;
-            }
+            Room = room[roomCounter];
+            roomCounter += 1;
             Instantiate(Room, transform.position, Quaternion.identity);
             #endregion
             Animator anim = Room.GetComponentInChildren<Animator>();

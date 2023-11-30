@@ -95,7 +95,7 @@ public class ObstacleSpawner : MonoBehaviour
             {
                 Room = room[roomCounter];
                 roomCounter += 1;
-                randomSpawn = true;
+                //randomSpawn = true;
             }
             Instantiate(Room, transform.position, Quaternion.identity);
             randomSpawn = false;

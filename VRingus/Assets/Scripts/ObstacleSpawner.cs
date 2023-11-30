@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum SpawnRequirement
@@ -78,15 +77,13 @@ public class ObstacleSpawner : MonoBehaviour
         if (room.Length > 0 && roomCounter <= room.Length - 1)
         {
             GameObject Room = null;
+            RandomizeScript randomRoom = room[roomCounter].GetComponent<RandomizeScript>();
             #region RandomRoom
             //Random room choice
-            if(randomSpawn == true)
+            if (room[roomCounter].GetComponent<RandomizeScript>() == null)
             {
-                if (randomSetCounter % 2 == 0)
-                {
-                    Room = randomSet1[Random.Range(0, randomSet1.Length - 1)];
-                    randomSetCounter += 1;
-                }
+                Room = randomRoom.room[Random.Range(0,randomRoom.room.Length-1)];
+                roomCounter++;
             }
             #endregion
             #region Pre-defined
@@ -94,11 +91,9 @@ public class ObstacleSpawner : MonoBehaviour
             else
             {
                 Room = room[roomCounter];
-                roomCounter += 1;
-                randomSpawn = true;
+                roomCounter++;
             }
             Instantiate(Room, transform.position, Quaternion.identity);
-            randomSpawn = false;
             #endregion
             Animator anim = Room.GetComponentInChildren<Animator>();
             anim.SetTrigger("CloseDoor");

@@ -77,7 +77,6 @@ public class ObstacleSpawner : MonoBehaviour
         if (room.Length > 0 && roomCounter <= room.Length - 1)
         {
             GameObject Room;
-            // randomRoom = room[roomCounter].GetComponent<RandomizeScript>();
             #region RandomRoom
             //Random room choice
             //if (room[roomCounter].GetComponent<RandomizeScript>() == null)
@@ -92,9 +91,8 @@ public class ObstacleSpawner : MonoBehaviour
             roomCounter += 1;
             Instantiate(Room, transform.position + new Vector3(0,0,51.25f), Quaternion.identity);
             #endregion
-            //Animator anim = Room.GetComponentInChildren<Animator>();
-            //anim.SetTrigger("CloseDoor");
-            //checkpoint.AddRoom(Room);
+            Animator anim = Room.GetComponentInChildren<Animator>();
+            anim.SetTrigger("CloseDoor");
         }
         else
         {

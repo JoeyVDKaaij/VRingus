@@ -341,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 608006399658069780, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 608006399658069780, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
@@ -520,6 +520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinalRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007665096993612480, guid: d29ffa71528f0644e87e9ef315cd3a57,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8156626196290718716, guid: d29ffa71528f0644e87e9ef315cd3a57,
         type: 3}
@@ -1220,6 +1225,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
+      propertyPath: room.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
       propertyPath: room.Array.data[0]
       value: 
       objectReference: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686,
@@ -1228,13 +1238,19 @@ PrefabInstance:
         type: 3}
       propertyPath: room.Array.data[1]
       value: 
-      objectReference: {fileID: 3535941687332135973, guid: 6ec65a8c23f44dd4d95242a372c44f71,
+      objectReference: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: room.Array.data[2]
       value: 
-      objectReference: {fileID: 8007665096993612480, guid: d29ffa71528f0644e87e9ef315cd3a57,
+      objectReference: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686,
+        type: 3}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
+      propertyPath: room.Array.data[3]
+      value: 
+      objectReference: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}

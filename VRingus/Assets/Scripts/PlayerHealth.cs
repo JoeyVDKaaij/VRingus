@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
-
+[RequireComponent(typeof(SphereCollider))]
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Player Settings")]
@@ -15,6 +15,17 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField, Tooltip("GameObject with the Death Animation.")]
     private GameObject DeathAnimation = null;
     private bool deathAnimationStarted = false;
+
+    public bool GotHit {  get; private set; }
+    public int Health { get { return health; } }
+
+    private void Awake()
+    {
+        if(GetComponent<SphereCollider>().isTrigger == true)
+        {
+            Debug.LogError("This collider should NOT be trigger!");
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,7 +42,9 @@ public class PlayerHealth : MonoBehaviour
         {
             health--;
             timer = 0.0f;
-        }
+            GotHit = true;
+        }else
+            GotHit=false;
     }
 
     void GameOver()

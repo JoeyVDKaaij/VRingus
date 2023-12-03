@@ -77,24 +77,25 @@ public class ObstacleSpawner : MonoBehaviour
         if (room.Length > 0 && roomCounter <= room.Length - 1)
         {
             GameObject Room;
-            // randomRoom = room[roomCounter].GetComponent<RandomizeScript>();
-            #region RandomRoom
+            RandomizeScript randomRoom = room[roomCounter].GetComponent<RandomizeScript>();
+
             //Random room choice
-            //if (room[roomCounter].GetComponent<RandomizeScript>() == null)
-            //{
-            //    Room = randomRoom.room[Random.Range(0,randomRoom.room.Length-1)];
-            //    roomCounter++;
-            //}
-            #endregion
-            #region Pre-defined
+            if (room[roomCounter].GetComponent<RandomizeScript>() == null)
+            {
+                Room = room[roomCounter];
+            }
             //Pre-defined choices
-            Room = room[roomCounter];
-            roomCounter += 1;
-            Instantiate(Room, transform.position, Quaternion.identity);
-            #endregion
-            //Animator anim = Room.GetComponentInChildren<Animator>();
-            //anim.SetTrigger("CloseDoor");
-            //checkpoint.AddRoom(Room);
+            else
+            {
+                Room = randomRoom.room[Random.Range(0, randomRoom.room.Length - 1)];
+            }
+            roomCounter++;
+            GameObject instantiatedRoom = Instantiate(Room, transform.position, Quaternion.identity);
+            Collider roomCollider = instantiatedRoom.GetComponent<Collider>();
+            if (roomCollider != null && roomCounter != 0)
+            {
+                instantiatedRoom.transform.position += new Vector3(0, 0, roomCollider.bounds.size.z/4);
+            }
         }
         else
         {

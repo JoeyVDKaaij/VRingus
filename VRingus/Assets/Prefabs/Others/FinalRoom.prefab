@@ -77,7 +77,7 @@ Transform:
   m_GameObject: {fileID: 7992254742915042834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 23.51}
+  m_LocalPosition: {x: 0, y: 2, z: 74.97108}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -182,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 8913124704967765253}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 24}
+  m_LocalPosition: {x: 0, y: 3, z: 75.461075}
   m_LocalScale: {x: 9.07, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -280,7 +280,12 @@ PrefabInstance:
     - target: {fileID: 210168497604389083, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
       propertyPath: targetPositionOffset.z
-      value: 25
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339602605496036864, guid: fdf214b1fdad0b54c86578b43f131686,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.443506
       objectReference: {fileID: 0}
     - target: {fileID: 7554438631714786925, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
@@ -332,6 +337,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8219010286098741519, guid: fdf214b1fdad0b54c86578b43f131686,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
       propertyPath: m_Name
@@ -340,6 +350,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1270827713992338858, guid: fdf214b1fdad0b54c86578b43f131686, type: 3}
+    - {fileID: 4983723107012969285, guid: fdf214b1fdad0b54c86578b43f131686, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7554438631714786925, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}

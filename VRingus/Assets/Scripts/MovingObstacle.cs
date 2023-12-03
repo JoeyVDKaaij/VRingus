@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public enum Direction
@@ -43,17 +42,47 @@ public class MovingObstacle : MonoBehaviour
         target.position = transform.position + targetPositionOffset;
     }
 
-    public void CheckpointCheck()
+    public bool CheckpointCheck()
+    {
+        Debug.Log("Checking checkpoint status in MovingObstacle...");
+        return isAtCheckpoint;
+    }
+
+    public void CheckpointToggle()
     {
         Debug.Log("Changing checkpoint status in MovingObstacle...");
         isAtCheckpoint = !isAtCheckpoint;
+    }
+
+    private void Deceleration(float decelerationFactor)
+    {
+        if (decelerationFactor < 0.2) 
+        {
+            switch (obstacleSettings.direction)
+            {
+                case Direction.x:
+                    transform.Translate(new Vector3(Time.deltaTime * obstacleSettings.movementSpeed * decelerationFactor, 0, 0));
+                    break;
+                case Direction.y:
+                    transform.Translate(new Vector3(0, Time.deltaTime * obstacleSettings.movementSpeed * decelerationFactor, 0));
+                    break;
+                case Direction.z:
+                    transform.Translate(new Vector3(0, 0, Time.deltaTime * obstacleSettings.movementSpeed * decelerationFactor));
+                    break;
+                default:
+                    Debug.LogWarning("Cannot find Enum value.");
+                    break;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         target.position = transform.position + targetPositionOffset;
+
         float distance = Vector3.Distance(player.position, target.position);
+  
         if (!isAtCheckpoint && !finalRoom || !isAtCheckpoint && distance < stoppingDistance && finalRoom && !stopping)
         {
             switch (obstacleSettings.direction)
@@ -78,21 +107,7 @@ public class MovingObstacle : MonoBehaviour
         {
             float decelerationFactor = Mathf.Clamp01(distance / stoppingDistance);
 
-            switch (obstacleSettings.direction)
-            {
-                case Direction.x:
-                    transform.Translate(new Vector3(Time.deltaTime * obstacleSettings.movementSpeed * decelerationFactor, 0, 0));
-                    break;
-                case Direction.y:
-                    transform.Translate(new Vector3(0, Time.deltaTime * obstacleSettings.movementSpeed * decelerationFactor, 0));
-                    break;
-                case Direction.z:
-                    transform.Translate(new Vector3(0, 0, Time.deltaTime * obstacleSettings.movementSpeed * decelerationFactor));
-                    break;
-                default:
-                    Debug.LogWarning("Cannot find Enum value.");
-                    break;
-            }
+            Deceleration(decelerationFactor);
 
             if (decelerationFactor < 0.2) stopped = true;
         }

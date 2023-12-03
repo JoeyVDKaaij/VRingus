@@ -4,7 +4,6 @@ using TMPro;
 
 public class ChangeUIVariables : MonoBehaviour
 {
-    private float timeLeft;
     [Header("Drag the player in here")]
     [SerializeField, Tooltip("In this case the player should be on the MainCamera")]
     private GameObject Player;
@@ -44,5 +43,6 @@ public class ChangeUIVariables : MonoBehaviour
         score = playerScore.Score;
         setText(livesText, "Lives", lives);
         setText(scoreText, "Score", score);
+        timeText.text = "Time: "+GameManager.gameManager.TimeInFormat();
     }
 }

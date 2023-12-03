@@ -7,6 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerHealth))]
 public class ScoreSystem : MonoBehaviour
 {
+    [Header("Score gain")]
+    [SerializeField, Tooltip("Set how much score the player would get per obstacle dodged"), Min(1)] private int scoreGain = 1;
     private int score;
     private PlayerHealth player;
     private Collider col;
@@ -29,7 +31,8 @@ public class ScoreSystem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle") && player.GotHit == false)
         {
-            score++;
+            //Apply the amount of scoreToGain to the current player score
+            score += scoreGain;
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Player Settings")]
-    [SerializeField, Tooltip("How many hitpoints the player has.")]
+    [SerializeField, Tooltip("How many hitpoints the player has."), Min(1)]
     private int health;
     [SerializeField, Tooltip("How long the player can't be damaged for.")]
     private float hitDelay = 5;

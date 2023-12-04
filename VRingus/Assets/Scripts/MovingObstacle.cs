@@ -28,7 +28,7 @@ public class MovingObstacle : MonoBehaviour
     private float stoppingDistance = 5.0f;
 
 
-    private Transform target = null;
+    private Vector3 target = new Vector3(0,0,0);
 
     private Transform player;
 
@@ -38,8 +38,7 @@ public class MovingObstacle : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new GameObject().transform;
-        target.position = transform.position + targetPositionOffset;
+        target = transform.position + targetPositionOffset;
     }
 
     public bool CheckpointCheck()
@@ -79,9 +78,9 @@ public class MovingObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target.position = transform.position + targetPositionOffset;
+        target = transform.position + targetPositionOffset;
 
-        float distance = Vector3.Distance(player.position, target.position);
+        float distance = Vector3.Distance(player.position, target);
   
         if (!isAtCheckpoint && !finalRoom || !isAtCheckpoint && distance < stoppingDistance && finalRoom && !stopping)
         {

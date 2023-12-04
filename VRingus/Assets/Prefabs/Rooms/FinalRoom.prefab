@@ -275,12 +275,12 @@ PrefabInstance:
     - target: {fileID: 210168497604389083, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
       propertyPath: stoppingDistance
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 210168497604389083, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
       propertyPath: targetPositionOffset.z
-      value: 75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3339602605496036864, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}

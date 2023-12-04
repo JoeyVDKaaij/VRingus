@@ -1125,13 +1125,13 @@ PrefabInstance:
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: room.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: room.Array.data[0]
       value: 
-      objectReference: {fileID: 3535941687332135973, guid: 6ec65a8c23f44dd4d95242a372c44f71,
+      objectReference: {fileID: 8007665096993612480, guid: d29ffa71528f0644e87e9ef315cd3a57,
         type: 3}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}

@@ -3618,3 +3618,225 @@
 [2023-12-04 10:09:14.814] [pxr_streamer] [error] [26304|16572]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x211c7852f40
 [2023-12-04 10:09:14.814] [pxr_streamer] [info] [26304|16572]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x211d7d3db20
 [2023-12-04 10:09:14.814] [pxr_streamer] [error] [26304|25676]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x211d7d3db20
+[2023-12-04 10:22:47.981] [pxr_streamer] [info] ***********  Log Begin **********
+[2023-12-04 10:22:47.981] [pxr_streamer] [info] process id= 12980
+[2023-12-04 10:22:47.981] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b9c5011f20
+[2023-12-04 10:22:47.981] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9a78705b0, this= 0x1b951564420
+[2023-12-04 10:22:47.981] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= Undefined, this= 0x1b951564420
+[2023-12-04 10:22:47.981] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951564420
+[2023-12-04 10:22:47.981] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951564420
+[2023-12-04 10:22:47.981] [pxr_streamer] [debug] [12980|24184]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951564420
+[2023-12-04 10:22:47.981] [pxr_streamer] [debug] [12980|24184]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b9a785d390
+[2023-12-04 10:22:47.981] [pxr_streamer] [info] [12980|24184]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b9a785d390
+[2023-12-04 10:22:50.017] [pxr_streamer] [error] [12980|27032]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b9a785d390
+[2023-12-04 10:22:50.017] [pxr_streamer] [info] [12980|27032]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951564420
+[2023-12-04 10:22:50.017] [pxr_streamer] [error] [12980|24184]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951564420
+[2023-12-04 10:30:04.438] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b9243be130
+[2023-12-04 10:30:04.438] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9c55b5f90, this= 0x1b9515637a0
+[2023-12-04 10:30:04.438] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b951564420
+[2023-12-04 10:30:04.438] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b9c5011f20
+[2023-12-04 10:30:04.438] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b9a785d390
+[2023-12-04 10:30:04.439] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b9515637a0
+[2023-12-04 10:30:04.439] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b9515637a0
+[2023-12-04 10:30:04.439] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 10:30:04.439] [pxr_streamer] [debug] [12980|24256]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 10:30:04.439] [pxr_streamer] [debug] [12980|24256]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1ba6109a9e0
+[2023-12-04 10:30:04.439] [pxr_streamer] [info] [12980|24256]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1ba6109a9e0
+[2023-12-04 10:30:06.462] [pxr_streamer] [error] [12980|2168]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1ba6109a9e0
+[2023-12-04 10:30:06.462] [pxr_streamer] [info] [12980|2168]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b9515637a0
+[2023-12-04 10:30:06.462] [pxr_streamer] [error] [12980|24256]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b9515637a0
+[2023-12-04 10:32:25.241] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b95064da70
+[2023-12-04 10:32:25.241] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1ba2b7303c0, this= 0x1b951563de0
+[2023-12-04 10:32:25.241] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b9515637a0
+[2023-12-04 10:32:25.241] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b9243be130
+[2023-12-04 10:32:25.241] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1ba6109a9e0
+[2023-12-04 10:32:25.242] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b951563de0
+[2023-12-04 10:32:25.242] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951563de0
+[2023-12-04 10:32:25.242] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 10:32:25.242] [pxr_streamer] [debug] [12980|23828]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 10:32:25.242] [pxr_streamer] [debug] [12980|23828]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b92481f9e0
+[2023-12-04 10:32:25.242] [pxr_streamer] [info] [12980|23828]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b92481f9e0
+[2023-12-04 10:32:27.272] [pxr_streamer] [error] [12980|11912]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b92481f9e0
+[2023-12-04 10:32:27.272] [pxr_streamer] [info] [12980|11912]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951563de0
+[2023-12-04 10:32:27.272] [pxr_streamer] [error] [12980|23828]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951563de0
+[2023-12-04 10:33:14.851] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b945e259c0
+[2023-12-04 10:33:14.852] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9249a1660, this= 0x1b951564420
+[2023-12-04 10:33:14.852] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b951563de0
+[2023-12-04 10:33:14.852] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b95064da70
+[2023-12-04 10:33:14.852] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b92481f9e0
+[2023-12-04 10:33:14.852] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b951564420
+[2023-12-04 10:33:14.852] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951564420
+[2023-12-04 10:33:14.852] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951564420
+[2023-12-04 10:33:14.852] [pxr_streamer] [debug] [12980|12160]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951564420
+[2023-12-04 10:33:14.852] [pxr_streamer] [debug] [12980|12160]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b948115d30
+[2023-12-04 10:33:14.852] [pxr_streamer] [info] [12980|12160]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b948115d30
+[2023-12-04 10:33:16.879] [pxr_streamer] [error] [12980|21380]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b948115d30
+[2023-12-04 10:33:16.879] [pxr_streamer] [info] [12980|21380]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951564420
+[2023-12-04 10:33:16.879] [pxr_streamer] [error] [12980|12160]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951564420
+[2023-12-04 10:33:41.980] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1ba510ffed0
+[2023-12-04 10:33:41.980] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9a377c620, this= 0x1b9515637a0
+[2023-12-04 10:33:41.980] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b951564420
+[2023-12-04 10:33:41.980] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b945e259c0
+[2023-12-04 10:33:41.980] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b948115d30
+[2023-12-04 10:33:41.981] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b9515637a0
+[2023-12-04 10:33:41.981] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b9515637a0
+[2023-12-04 10:33:41.981] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 10:33:41.981] [pxr_streamer] [debug] [12980|6672]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 10:33:41.981] [pxr_streamer] [debug] [12980|6672]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b9492bb720
+[2023-12-04 10:33:41.981] [pxr_streamer] [info] [12980|6672]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b9492bb720
+[2023-12-04 10:33:44.013] [pxr_streamer] [error] [12980|6792]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b9492bb720
+[2023-12-04 10:33:44.013] [pxr_streamer] [info] [12980|6792]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b9515637a0
+[2023-12-04 10:33:44.013] [pxr_streamer] [error] [12980|6672]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b9515637a0
+[2023-12-04 10:37:13.527] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1ba2c19d0e0
+[2023-12-04 10:37:13.527] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b921164600, this= 0x1b951563de0
+[2023-12-04 10:37:13.527] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b9515637a0
+[2023-12-04 10:37:13.527] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1ba510ffed0
+[2023-12-04 10:37:13.527] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b9492bb720
+[2023-12-04 10:37:13.527] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b951563de0
+[2023-12-04 10:37:13.527] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951563de0
+[2023-12-04 10:37:13.527] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 10:37:13.527] [pxr_streamer] [debug] [12980|20496]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 10:37:13.527] [pxr_streamer] [debug] [12980|20496]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b9a9eea2a0
+[2023-12-04 10:37:13.527] [pxr_streamer] [info] [12980|20496]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b9a9eea2a0
+[2023-12-04 10:37:15.554] [pxr_streamer] [error] [12980|14760]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b9a9eea2a0
+[2023-12-04 10:37:15.554] [pxr_streamer] [info] [12980|14760]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951563de0
+[2023-12-04 10:37:15.554] [pxr_streamer] [error] [12980|20496]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951563de0
+[2023-12-04 10:43:14.692] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b9af6e7080
+[2023-12-04 10:43:14.692] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9a3c3e390, this= 0x1b9515637a0
+[2023-12-04 10:43:14.692] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b951563de0
+[2023-12-04 10:43:14.692] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1ba2c19d0e0
+[2023-12-04 10:43:14.692] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b9a9eea2a0
+[2023-12-04 10:43:14.693] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b9515637a0
+[2023-12-04 10:43:14.693] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b9515637a0
+[2023-12-04 10:43:14.693] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 10:43:14.693] [pxr_streamer] [debug] [12980|13576]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 10:43:14.693] [pxr_streamer] [debug] [12980|13576]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b92443eab0
+[2023-12-04 10:43:14.693] [pxr_streamer] [info] [12980|13576]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b92443eab0
+[2023-12-04 10:43:16.716] [pxr_streamer] [error] [12980|27092]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b92443eab0
+[2023-12-04 10:43:16.716] [pxr_streamer] [info] [12980|27092]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b9515637a0
+[2023-12-04 10:43:16.716] [pxr_streamer] [error] [12980|13576]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b9515637a0
+[2023-12-04 10:43:50.326] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b954b2e1e0
+[2023-12-04 10:43:50.326] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9a377c3a0, this= 0x1b951563de0
+[2023-12-04 10:43:50.327] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b9515637a0
+[2023-12-04 10:43:50.327] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b9af6e7080
+[2023-12-04 10:43:50.327] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b92443eab0
+[2023-12-04 10:43:50.327] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b951563de0
+[2023-12-04 10:43:50.327] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951563de0
+[2023-12-04 10:43:50.327] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 10:43:50.327] [pxr_streamer] [debug] [12980|21864]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 10:43:50.327] [pxr_streamer] [debug] [12980|21864]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b9be4620f0
+[2023-12-04 10:43:50.327] [pxr_streamer] [info] [12980|21864]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b9be4620f0
+[2023-12-04 10:43:52.363] [pxr_streamer] [error] [12980|23340]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b9be4620f0
+[2023-12-04 10:43:52.363] [pxr_streamer] [info] [12980|23340]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951563de0
+[2023-12-04 10:43:52.363] [pxr_streamer] [error] [12980|21864]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951563de0
+[2023-12-04 10:44:22.944] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1ba87d87c90
+[2023-12-04 10:44:22.944] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9495d04a0, this= 0x1b951564420
+[2023-12-04 10:44:22.944] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b951563de0
+[2023-12-04 10:44:22.944] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b954b2e1e0
+[2023-12-04 10:44:22.944] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b9be4620f0
+[2023-12-04 10:44:22.945] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b951564420
+[2023-12-04 10:44:22.945] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951564420
+[2023-12-04 10:44:22.945] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951564420
+[2023-12-04 10:44:22.945] [pxr_streamer] [debug] [12980|9808]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951564420
+[2023-12-04 10:44:22.945] [pxr_streamer] [debug] [12980|9808]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b9a8121410
+[2023-12-04 10:44:22.945] [pxr_streamer] [info] [12980|9808]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b9a8121410
+[2023-12-04 10:44:24.977] [pxr_streamer] [error] [12980|13928]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b9a8121410
+[2023-12-04 10:44:24.977] [pxr_streamer] [info] [12980|13928]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951564420
+[2023-12-04 10:44:24.977] [pxr_streamer] [error] [12980|9808]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951564420
+[2023-12-04 10:49:38.597] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b9af1bcf00
+[2023-12-04 10:49:38.597] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9ab74d4d0, this= 0x1b9515637a0
+[2023-12-04 10:49:38.597] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b951564420
+[2023-12-04 10:49:38.597] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1ba87d87c90
+[2023-12-04 10:49:38.597] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b9a8121410
+[2023-12-04 10:49:38.598] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b9515637a0
+[2023-12-04 10:49:38.598] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b9515637a0
+[2023-12-04 10:49:38.598] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 10:49:38.598] [pxr_streamer] [debug] [12980|13716]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 10:49:38.598] [pxr_streamer] [debug] [12980|13716]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1ba62917c80
+[2023-12-04 10:49:38.598] [pxr_streamer] [info] [12980|13716]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1ba62917c80
+[2023-12-04 10:49:40.636] [pxr_streamer] [error] [12980|15096]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1ba62917c80
+[2023-12-04 10:49:40.636] [pxr_streamer] [info] [12980|15096]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b9515637a0
+[2023-12-04 10:49:40.636] [pxr_streamer] [error] [12980|13716]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b9515637a0
+[2023-12-04 10:51:56.408] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b9a5f5adf0
+[2023-12-04 10:51:56.408] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b950966c10, this= 0x1b951563de0
+[2023-12-04 10:51:56.408] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b9515637a0
+[2023-12-04 10:51:56.408] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b9af1bcf00
+[2023-12-04 10:51:56.408] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1ba62917c80
+[2023-12-04 10:51:56.409] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b951563de0
+[2023-12-04 10:51:56.409] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951563de0
+[2023-12-04 10:51:56.409] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 10:51:56.409] [pxr_streamer] [debug] [12980|7992]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 10:51:56.409] [pxr_streamer] [debug] [12980|7992]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b9ab357740
+[2023-12-04 10:51:56.409] [pxr_streamer] [info] [12980|7992]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b9ab357740
+[2023-12-04 10:51:58.437] [pxr_streamer] [error] [12980|18064]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b9ab357740
+[2023-12-04 10:51:58.437] [pxr_streamer] [info] [12980|18064]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951563de0
+[2023-12-04 10:51:58.437] [pxr_streamer] [error] [12980|7992]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951563de0
+[2023-12-04 11:03:17.908] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b9505281f0
+[2023-12-04 11:03:17.908] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9bdd28510, this= 0x1b951564420
+[2023-12-04 11:03:17.909] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b951563de0
+[2023-12-04 11:03:17.909] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b9a5f5adf0
+[2023-12-04 11:03:17.909] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b9ab357740
+[2023-12-04 11:03:17.909] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b951564420
+[2023-12-04 11:03:17.909] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951564420
+[2023-12-04 11:03:17.909] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951564420
+[2023-12-04 11:03:17.909] [pxr_streamer] [debug] [12980|22332]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951564420
+[2023-12-04 11:03:17.909] [pxr_streamer] [debug] [12980|22332]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1ba60eab850
+[2023-12-04 11:03:17.909] [pxr_streamer] [info] [12980|22332]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1ba60eab850
+[2023-12-04 11:03:19.950] [pxr_streamer] [error] [12980|7892]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1ba60eab850
+[2023-12-04 11:03:19.950] [pxr_streamer] [info] [12980|7892]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951564420
+[2023-12-04 11:03:19.950] [pxr_streamer] [error] [12980|22332]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951564420
+[2023-12-04 11:05:28.717] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1b9aae54490
+[2023-12-04 11:05:28.717] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1b9ab33c8b0, this= 0x1b9515637a0
+[2023-12-04 11:05:28.717] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b951564420
+[2023-12-04 11:05:28.717] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b9505281f0
+[2023-12-04 11:05:28.717] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1ba60eab850
+[2023-12-04 11:05:28.717] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b9515637a0
+[2023-12-04 11:05:28.717] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b9515637a0
+[2023-12-04 11:05:28.717] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 11:05:28.717] [pxr_streamer] [debug] [12980|5076]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b9515637a0
+[2023-12-04 11:05:28.717] [pxr_streamer] [debug] [12980|5076]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b9a7ceabb0
+[2023-12-04 11:05:28.718] [pxr_streamer] [info] [12980|5076]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b9a7ceabb0
+[2023-12-04 11:05:30.746] [pxr_streamer] [error] [12980|23944]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b9a7ceabb0
+[2023-12-04 11:05:30.746] [pxr_streamer] [info] [12980|23944]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b9515637a0
+[2023-12-04 11:05:30.746] [pxr_streamer] [error] [12980|5076]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b9515637a0
+[2023-12-04 11:06:50.774] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x1ba61fb4ad0
+[2023-12-04 11:06:50.774] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x1ba60bdafb0, this= 0x1b951563de0
+[2023-12-04 11:06:50.774] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x1b9515637a0
+[2023-12-04 11:06:50.774] [pxr_streamer] [info] [12980|25632]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x1b9aae54490
+[2023-12-04 11:06:50.774] [pxr_streamer] [debug] [12980|25632]transport_client_tcp2.cpp:73 Stop: called, this= 0x1b9a7ceabb0
+[2023-12-04 11:06:50.775] [pxr_streamer] [debug] [12980|25632]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x1b951563de0
+[2023-12-04 11:06:50.775] [pxr_streamer] [error] [12980|25632]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x1b951563de0
+[2023-12-04 11:06:50.775] [pxr_streamer] [info] [12980|25632]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 11:06:50.775] [pxr_streamer] [debug] [12980|21800]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x1b951563de0
+[2023-12-04 11:06:50.775] [pxr_streamer] [debug] [12980|21800]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x1b948017020
+[2023-12-04 11:06:50.775] [pxr_streamer] [info] [12980|21800]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x1b948017020
+[2023-12-04 11:06:52.811] [pxr_streamer] [error] [12980|16816]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x1b948017020
+[2023-12-04 11:06:52.811] [pxr_streamer] [info] [12980|16816]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x1b951563de0
+[2023-12-04 11:06:52.811] [pxr_streamer] [error] [12980|21800]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x1b951563de0
+[2023-12-04 11:43:00.594] [pxr_streamer] [info] ***********  Log Begin **********
+[2023-12-04 11:43:00.594] [pxr_streamer] [info] process id= 17872
+[2023-12-04 11:43:00.594] [pxr_streamer] [info] [17872|19432]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x2d06fc49900
+[2023-12-04 11:43:00.594] [pxr_streamer] [debug] [17872|19432]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x2cfb4456720, this= 0x2cfd8ba6310
+[2023-12-04 11:43:00.594] [pxr_streamer] [debug] [17872|19432]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= Undefined, this= 0x2cfd8ba6310
+[2023-12-04 11:43:00.594] [pxr_streamer] [error] [17872|19432]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x2cfd8ba6310
+[2023-12-04 11:43:00.594] [pxr_streamer] [info] [17872|19432]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x2cfd8ba6310
+[2023-12-04 11:43:00.594] [pxr_streamer] [debug] [17872|25768]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x2cfd8ba6310
+[2023-12-04 11:43:00.594] [pxr_streamer] [debug] [17872|25768]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x2cfb422ff30
+[2023-12-04 11:43:00.595] [pxr_streamer] [info] [17872|25768]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x2cfb422ff30
+[2023-12-04 11:43:02.623] [pxr_streamer] [error] [17872|21496]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x2cfb422ff30
+[2023-12-04 11:43:02.623] [pxr_streamer] [info] [17872|21496]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x2cfd8ba6310
+[2023-12-04 11:43:02.623] [pxr_streamer] [error] [17872|25768]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x2cfd8ba6310
+[2023-12-04 11:43:35.837] [pxr_streamer] [info] [17872|19432]driver_impl.cpp:22 DriverImpl: Driver created, this= 0x2cfe14fc900
+[2023-12-04 11:43:35.837] [pxr_streamer] [debug] [17872|19432]streaming_driver_interface_impl.cpp:20 StreamingDriverInterfaceImpl: callback= 0x2d0b7e15f60, this= 0x2cfd8ba6950
+[2023-12-04 11:43:35.837] [pxr_streamer] [debug] [17872|19432]streaming_driver_interface_impl.cpp:27 ~StreamingDriverInterfaceImpl: called, this= 0x2cfd8ba6310
+[2023-12-04 11:43:35.837] [pxr_streamer] [info] [17872|19432]driver_impl.cpp:27 ~DriverImpl: Driver destroyed, this= 0x2d06fc49900
+[2023-12-04 11:43:35.837] [pxr_streamer] [debug] [17872|19432]transport_client_tcp2.cpp:73 Stop: called, this= 0x2cfb422ff30
+[2023-12-04 11:43:35.838] [pxr_streamer] [debug] [17872|19432]streaming_driver_interface_impl.cpp:117 SetTrackingOrigin: tracking origin= FloorLevel, this= 0x2cfd8ba6950
+[2023-12-04 11:43:35.838] [pxr_streamer] [error] [17872|19432]streaming_driver_interface_impl.cpp:119 SetTrackingOrigin: "not connected", connect_state_ != DriverConnectState::kRpcConnected, this= 0x2cfd8ba6950
+[2023-12-04 11:43:35.838] [pxr_streamer] [info] [17872|19432]streaming_driver_interface_impl.cpp:39 ConnectToService: connect to service, this= 0x2cfd8ba6950
+[2023-12-04 11:43:35.838] [pxr_streamer] [debug] [17872|14320]streaming_driver_interface_impl.cpp:343 InvokeConnectToService: connect to service, this= 0x2cfd8ba6950
+[2023-12-04 11:43:35.838] [pxr_streamer] [debug] [17872|14320]transport_client_tcp2.cpp:33 Start: buffer size(send\recv): 1048576\1048576, this= 0x2d0b7ba6170
+[2023-12-04 11:43:35.838] [pxr_streamer] [info] [17872|14320]transport_client_tcp2.cpp:58 Start: server= 127.0.0.1:29000, local=0.0.0.0:0, this= 0x2d0b7ba6170
+[2023-12-04 11:43:37.859] [pxr_streamer] [error] [17872|13980]transport_client_tcp2.cpp:145 HandleConnect: connected error= No connection could be made because the target machine actively refused it., this= 0x2d0b7ba6170
+[2023-12-04 11:43:37.859] [pxr_streamer] [info] [17872|13980]streaming_driver_interface_impl.cpp:141 NotifyConnectResult: connect to service, result= 10061, this= 0x2cfd8ba6950
+[2023-12-04 11:43:37.859] [pxr_streamer] [error] [17872|14320]streaming_driver_interface_impl.cpp:438 HandleTransportConnect: connect to service error= 10061, this= 0x2cfd8ba6950

@@ -15,8 +15,8 @@ public class ChangeUIVariables : MonoBehaviour
 
     //Variables from this script
     [SerializeField] private TextMeshProUGUI livesText;
-    [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI timeText;
+    //[SerializeField] private TextMeshProUGUI scoreText;
+    //[SerializeField] private TextMeshProUGUI timeText;
 
     private void Awake()
     {
@@ -42,7 +42,7 @@ public class ChangeUIVariables : MonoBehaviour
         lives = playerHealth.Health;
         score = playerScore.Score;
         setText(livesText, "Lives", lives);
-        setText(scoreText, "Score", score);
-        timeText.text = "Time: "+GameManager.gameManager.TimeInFormat();
+        //setText(scoreText, "Room", score);
+        //timeText.text = "Time: "+GameManager.gameManager.TimeInFormat();
     }
 }

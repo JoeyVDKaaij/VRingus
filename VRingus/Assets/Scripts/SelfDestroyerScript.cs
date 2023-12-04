@@ -14,8 +14,8 @@ public class SelfDestroyerScript : MonoBehaviour
 
     private void Awake()
     {
-        explosionSound = GetComponent<AudioSource>();
-        explosionTime = explosionSound.clip.length;
+        //explosionSound = GetComponent<AudioSource>();
+        //explosionTime = explosionSound.clip.length;
     }
 
 

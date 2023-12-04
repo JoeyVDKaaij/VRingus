@@ -15,13 +15,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField, Tooltip("GameObject with the Death Animation.")]
     private GameObject DeathAnimation = null;
     private bool deathAnimationStarted = false;
-
-    public bool GotHit {  get; private set; }
     public int Health { get { return health; } }
 
     private void Awake()
     {
-        if(GetComponent<SphereCollider>().isTrigger == true)
+        if (GetComponent<SphereCollider>().isTrigger == true)
         {
             Debug.LogError("This collider should NOT be trigger!");
         }
@@ -42,9 +40,7 @@ public class PlayerHealth : MonoBehaviour
         {
             health--;
             timer = 0.0f;
-            GotHit = true;
-        }else
-            GotHit=false;
+        }
     }
 
     void GameOver()

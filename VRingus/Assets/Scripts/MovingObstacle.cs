@@ -19,14 +19,14 @@ public class MovingObstacle : MonoBehaviour
     public MovingObstacleSettings Settings { get { return obstacleSettings; } }
 
     [Header("Stopping Movement Settings")]
+    [SerializeField, Tooltip("Set to true if this GameObject is the final room")]
+    private bool finalRoom = false;
     [SerializeField, Tooltip("Where (from this GameObject position) should the target be.")]
     private Vector3 targetPositionOffset = new Vector3(0, 0, 0);
 
     [SerializeField, Tooltip("When should the room slow down and stop moving from the set target position.")]
     private float stoppingDistance = 5.0f;
 
-    [SerializeField, Tooltip("Set to true if this GameObject is the final room")]
-    private bool finalRoom = false;
 
     private Transform target = null;
 

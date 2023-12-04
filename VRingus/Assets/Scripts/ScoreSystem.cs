@@ -29,7 +29,7 @@ public class ScoreSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Obstacle") && player.GotHit == false)
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             //Apply the amount of scoreToGain to the current player score
             score += scoreGain;

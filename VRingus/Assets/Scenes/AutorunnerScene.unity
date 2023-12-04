@@ -344,6 +344,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 51092725721249041, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.0676317
+      objectReference: {fileID: 0}
+    - target: {fileID: 51092725721249041, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.14711797
+      objectReference: {fileID: 0}
     - target: {fileID: 608006399658069780, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: DeathAnimation
@@ -1239,7 +1249,7 @@ PrefabInstance:
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: room.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}

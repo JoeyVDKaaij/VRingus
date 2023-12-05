@@ -46,6 +46,8 @@ public class ObstacleSpawner : MonoBehaviour
     private bool randomSpawn = false;
     private int randomSetCounter = 0;
 
+    private GameObject previouslySpawnedRoom = null;
+
     private bool canExit = true;
     //private StopRoomAdvance checkpoint; //The checkpoint that makes the whole room advance pause
 
@@ -54,12 +56,9 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Awake()
     {
-        initialPosition = transform.position;
-        transform.position += spawnPositionOffset;
-        newPosition = transform.position + spawnPositionOffset;
-
-        if (colliderSize != null)
-            gameObject.GetComponent<BoxCollider>().size = colliderSize.bounds.size;
+        //initialPosition = transform.position;
+        //transform.position += spawnPositionOffset;
+        //newPosition = transform.position + spawnPositionOffset;
 
         gameObject.GetComponent<BoxCollider>().center += colliderPositionOffSet;
     }
@@ -91,10 +90,13 @@ public class ObstacleSpawner : MonoBehaviour
             }
             roomCounter++;
             GameObject instantiatedRoom = Instantiate(Room, transform.position, Quaternion.identity);
-            Collider roomCollider = instantiatedRoom.GetComponent<Collider>();
+            if (previouslySpawnedRoom == null)
+                previouslySpawnedRoom = instantiatedRoom;
+            Collider roomCollider = previouslySpawnedRoom.GetComponent<Collider>();
             if (roomCollider != null && roomCounter != 0)
             {
-                instantiatedRoom.transform.position += new Vector3(0, 0, roomCollider.bounds.size.z/4);
+                instantiatedRoom.transform.position += new Vector3(0, 0, roomCollider.bounds.size.z/2 + colliderPositionOffSet.z);
+                previouslySpawnedRoom = instantiatedRoom;
             }
         }
         else

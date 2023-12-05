@@ -377,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 4134505312059479865, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.27
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 4134505312059479865, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
@@ -1447,6 +1447,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
+      propertyPath: spawnOnEnter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
+        type: 3}
       propertyPath: room.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1454,7 +1459,7 @@ PrefabInstance:
         type: 3}
       propertyPath: room.Array.data[0]
       value: 
-      objectReference: {fileID: 8557993078895273809, guid: fdf214b1fdad0b54c86578b43f131686,
+      objectReference: {fileID: 7550783895678790526, guid: 1591f7e16da4bb449b77f615de18bfed,
         type: 3}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
@@ -1487,7 +1492,7 @@ PrefabInstance:
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
       propertyPath: colliderPositionOffSet.z
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1360140511045455299, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}
@@ -1740,7 +1745,7 @@ PrefabInstance:
     - target: {fileID: 5832720066153137082, guid: 7a057ef68b0855c468b63c68b917f70e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -299.4
+      value: -187.2
       objectReference: {fileID: 0}
     - target: {fileID: 5832720066153137082, guid: 7a057ef68b0855c468b63c68b917f70e,
         type: 3}

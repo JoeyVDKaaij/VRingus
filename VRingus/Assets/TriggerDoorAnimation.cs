@@ -26,11 +26,16 @@ public class TriggerDoorAnimation : MonoBehaviour
         {
             Debug.Log("Opening door...");
             animator.SetBool("DoorOpen", true);
+            doorIsOpen = true;
         }
         else
         {
-            Debug.Log("Closing door...");
-            animator.SetBool("DoorOpen", false);
+            if (doorIsOpen)
+            {
+                Debug.Log("Closing door...");
+                animator.SetBool("DoorOpen", false);
+                doorIsOpen = false;
+            }
         }
 
     }

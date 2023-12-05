@@ -95,7 +95,7 @@ public class ObstacleSpawner : MonoBehaviour
             Collider roomCollider = previouslySpawnedRoom.GetComponent<Collider>();
             if (roomCollider != null && roomCounter != 0)
             {
-                instantiatedRoom.transform.position += new Vector3(0, 0, roomCollider.bounds.size.z/2 + colliderPositionOffSet.z);
+                instantiatedRoom.transform.position += new Vector3(0, 0, roomCollider.bounds.size.z/2 + colliderPositionOffSet.z - 1);
                 previouslySpawnedRoom = instantiatedRoom;
             }
         }

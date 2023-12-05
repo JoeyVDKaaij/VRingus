@@ -159,7 +159,7 @@ PrefabInstance:
     - target: {fileID: 114290452266318114, guid: 1d61c3bec69e0844794202d8b8ef0c63,
         type: 3}
       propertyPath: m_Name
-      value: Room 1w1
+      value: Room 1W1
       objectReference: {fileID: 0}
     - target: {fileID: 4778093245613589464, guid: 1d61c3bec69e0844794202d8b8ef0c63,
         type: 3}
@@ -214,7 +214,7 @@ PrefabInstance:
     - target: {fileID: 6590140478525646522, guid: 1d61c3bec69e0844794202d8b8ef0c63,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -235,7 +235,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 9149090357181032627}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 114290452266318114, guid: 1d61c3bec69e0844794202d8b8ef0c63,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5258406037734946274}
   m_SourcePrefab: {fileID: 100100000, guid: 1d61c3bec69e0844794202d8b8ef0c63, type: 3}
 --- !u!4 &87417765483887478 stripped
 Transform:
@@ -243,6 +247,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4862097057013594286}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4823259598604009868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 114290452266318114, guid: 1d61c3bec69e0844794202d8b8ef0c63,
+    type: 3}
+  m_PrefabInstance: {fileID: 4862097057013594286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5258406037734946274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823259598604009868}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.99245, y: 6.361883, z: 150}
+  m_Center: {x: 0.040468693, y: 2.6809416, z: 0}
 --- !u!1001 &7834113766095280908
 PrefabInstance:
   m_ObjectHideFlags: 0

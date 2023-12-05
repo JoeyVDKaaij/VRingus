@@ -8,6 +8,8 @@ public enum Direction
 }
 public class MovingObstacle : MonoBehaviour
 {
+    private SceneTransitionManager sceneTransitionManager;
+
     [SerializeField]
     [Tooltip("This is where you add the scriptable object settings")]
     protected MovingObstacleSettings obstacleSettings;
@@ -28,18 +30,27 @@ public class MovingObstacle : MonoBehaviour
     private float stoppingDistance = 5.0f;
 
 
-    private Transform target = null;
+    private Vector3 target = new Vector3(0,0,0);
+    private BoxCollider col;
+    private float colliderLength;
 
     private Transform player;
 
     private bool stopping;
     private bool stopped;
 
+    private void Awake()
+    {
+        col = GetComponent<BoxCollider>();
+        colliderLength = col.bounds.size.z;
+    }
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new GameObject().transform;
-        target.position = transform.position + targetPositionOffset;
+        target = transform.position + targetPositionOffset;
+        if (GameObject.FindGameObjectWithTag("TransitionManager") != null) 
+            sceneTransitionManager = GameObject.FindGameObjectWithTag("TransitionManager").GetComponent<SceneTransitionManager>();
     }
 
     public bool CheckpointCheck()
@@ -56,7 +67,7 @@ public class MovingObstacle : MonoBehaviour
 
     private void Deceleration(float decelerationFactor)
     {
-        if (decelerationFactor < 0.2) 
+        if (decelerationFactor >= 0.01) 
         {
             switch (obstacleSettings.direction)
             {
@@ -79,11 +90,11 @@ public class MovingObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target.position = transform.position + targetPositionOffset;
+        target = transform.position + new Vector3(0,0,colliderLength/2);
 
-        float distance = Vector3.Distance(player.position, target.position);
+        float distance = Vector3.Distance(player.position, target);
   
-        if (!isAtCheckpoint && !finalRoom || !isAtCheckpoint && distance < stoppingDistance && finalRoom && !stopping)
+        if ((!isAtCheckpoint && !finalRoom) || (!isAtCheckpoint && distance < stoppingDistance && finalRoom && !stopping && !stopped))
         {
             switch (obstacleSettings.direction)
             {
@@ -101,7 +112,10 @@ public class MovingObstacle : MonoBehaviour
                     break;
             }
         }
-        else stopping = true;
+        else
+        {
+            stopping = true;
+        }
 
         if (!isAtCheckpoint && finalRoom && stopping && !stopped)
         {
@@ -109,7 +123,17 @@ public class MovingObstacle : MonoBehaviour
 
             Deceleration(decelerationFactor);
 
-            if (decelerationFactor < 0.2) stopped = true;
+            if (decelerationFactor < 0.3)
+            {
+                stopped = true;
+                if (sceneTransitionManager != null)
+                    sceneTransitionManager.GoToSceneAsync(0);
+            }
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(target, stoppingDistance);
     }
 }

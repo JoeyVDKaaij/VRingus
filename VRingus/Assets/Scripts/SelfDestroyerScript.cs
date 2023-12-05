@@ -14,8 +14,9 @@ public class SelfDestroyerScript : MonoBehaviour
 
     private void Awake()
     {
-        explosionSound = GetComponent<AudioSource>();
-        explosionTime = explosionSound.clip.length;
+        //explosionSound = GetComponent<AudioSource>();
+        //if (explosionSound.clip != null)
+        //    explosionTime = explosionSound.clip.length;
     }
 
 
@@ -26,10 +27,10 @@ public class SelfDestroyerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetType() == typeof(SphereCollider) && other.CompareTag("MainCamera"))
+        if (other.GetType() == typeof(SphereCollider) && other.CompareTag("MainCamera"))
         {
             GetComponent<MeshRenderer>().enabled = false;
-            if(explosionSound.clip != null)
+            if (explosionSound.clip != null)
             {
                 explosionSound.Play();
             }

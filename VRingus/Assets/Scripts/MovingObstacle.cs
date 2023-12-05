@@ -8,6 +8,8 @@ public enum Direction
 }
 public class MovingObstacle : MonoBehaviour
 {
+    private SceneTransitionManager sceneTransitionManager;
+
     [SerializeField]
     [Tooltip("This is where you add the scriptable object settings")]
     protected MovingObstacleSettings obstacleSettings;
@@ -47,6 +49,8 @@ public class MovingObstacle : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = transform.position + targetPositionOffset;
+        if (GameObject.FindGameObjectWithTag("TransitionManager") != null) 
+            sceneTransitionManager = GameObject.FindGameObjectWithTag("TransitionManager").GetComponent<SceneTransitionManager>();
     }
 
     public bool CheckpointCheck()
@@ -116,10 +120,13 @@ public class MovingObstacle : MonoBehaviour
             float decelerationFactor = Mathf.Clamp01(distance / stoppingDistance);
             Deceleration(decelerationFactor);
 
-            if (decelerationFactor < 0.1) 
+            if (decelerationFactor < 0.3)
+            {
                 stopped = true;
+                if (sceneTransitionManager != null)
+                    sceneTransitionManager.GoToSceneAsync(0);
+            }
         }
-
     }
 
     private void OnDrawGizmosSelected()

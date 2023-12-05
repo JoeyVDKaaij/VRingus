@@ -279,6 +279,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 210168497604389083, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
+      propertyPath: sceneTransitionManager
+      value: 
+      objectReference: {fileID: 8841422738568278765, guid: b09d33c8b7830a34d89d176d138cba96,
+        type: 3}
+    - target: {fileID: 210168497604389083, guid: fdf214b1fdad0b54c86578b43f131686,
+        type: 3}
       propertyPath: targetPositionOffset.z
       value: 0
       objectReference: {fileID: 0}
@@ -356,6 +362,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 1270827713992338858, guid: fdf214b1fdad0b54c86578b43f131686, type: 3}
     - {fileID: 4983723107012969285, guid: fdf214b1fdad0b54c86578b43f131686, type: 3}
+    - {fileID: 6097949982859891698, guid: fdf214b1fdad0b54c86578b43f131686, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7554438631714786925, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}

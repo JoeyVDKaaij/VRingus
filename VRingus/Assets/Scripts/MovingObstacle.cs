@@ -114,7 +114,6 @@ public class MovingObstacle : MonoBehaviour
         }
         else if(distance < stoppingDistance)
             stopping = true;
-        }
 
         if (!isAtCheckpoint && finalRoom && stopping && !stopped)
         {
@@ -128,7 +127,6 @@ public class MovingObstacle : MonoBehaviour
                     sceneTransitionManager.GoToSceneAsync(0);
             }
         }
-
     }
 
     private void OnDrawGizmosSelected()

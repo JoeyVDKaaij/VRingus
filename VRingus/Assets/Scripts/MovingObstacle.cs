@@ -63,7 +63,7 @@ public class MovingObstacle : MonoBehaviour
 
     private void Deceleration(float decelerationFactor)
     {
-        if (decelerationFactor >= 0.01) 
+        if (decelerationFactor >= 0.1) 
         {
             switch (obstacleSettings.direction)
             {
@@ -90,7 +90,7 @@ public class MovingObstacle : MonoBehaviour
 
         float distance = Vector3.Distance(player.position, target);
   
-        if ((!isAtCheckpoint && !finalRoom) || (!isAtCheckpoint && distance < stoppingDistance && finalRoom && !stopping && !stopped))
+        if ((!isAtCheckpoint && !finalRoom) || (!isAtCheckpoint && distance > stoppingDistance && finalRoom && !stopping && !stopped))
         {
             switch (obstacleSettings.direction)
             {
@@ -108,18 +108,18 @@ public class MovingObstacle : MonoBehaviour
                     break;
             }
         }
-        else 
+        else if(distance < stoppingDistance)
             stopping = true;
 
         if (!isAtCheckpoint && finalRoom && stopping && !stopped)
         {
             float decelerationFactor = Mathf.Clamp01(distance / stoppingDistance);
-
             Deceleration(decelerationFactor);
 
-            if (decelerationFactor < 0.01) 
+            if (decelerationFactor < 0.1) 
                 stopped = true;
         }
+
     }
 
     private void OnDrawGizmosSelected()

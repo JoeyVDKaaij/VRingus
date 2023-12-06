@@ -63,3 +63,4 @@ public class ShootingScript : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, distanceLookingTreshold);
     }
 }
+}

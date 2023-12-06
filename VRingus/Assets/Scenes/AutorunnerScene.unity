@@ -1572,20 +1572,25 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 131208433}
-    - target: {fileID: 3743946234341857962, guid: 8ca7aa0873821d14c909753095d4899e,
+    - target: {fileID: 6915516605862112573, guid: 8ca7aa0873821d14c909753095d4899e,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 300
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915516605862112573, guid: 8ca7aa0873821d14c909753095d4899e,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915516605862112573, guid: 8ca7aa0873821d14c909753095d4899e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6915516605862112573, guid: 8ca7aa0873821d14c909753095d4899e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 7839814291730473189, guid: 8ca7aa0873821d14c909753095d4899e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 300
+      value: -235
       objectReference: {fileID: 0}
     - target: {fileID: 8664263888763189098, guid: 8ca7aa0873821d14c909753095d4899e,
         type: 3}

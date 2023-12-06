@@ -12,12 +12,6 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField, Tooltip("Sets room GameObjects that should spawn. (MANDATORY)")]
     private GameObject[] room = null;
 
-    [Header("Position Settings")]
-    [SerializeField, Tooltip("Set the spawnOffSet")]
-    private Vector3 spawnPositionOffset = Vector3.zero;
-    private Vector3 newPosition = Vector3.zero;
-    private Vector3 initialPosition = Vector3.zero;
-
     [Header("Spawn Settings")]
     [SerializeField, Tooltip("Set the requirement on how the GameObject spawns.")]
     private SpawnRequirement spawnRequirement = SpawnRequirement.Timed;
@@ -27,31 +21,15 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField, Range(1, 100), Tooltip("Set how long it should wait until it spawns a new GameObject.")]
     private float spawnRate = 1f;
 
-    [SerializeField, Tooltip("Sets the size of the spawner collider with the size of a gameobject.")]
-    private MeshRenderer colliderSize = null;
     [SerializeField, Tooltip("Sets the offset position of the center of the collider in a gameobject.")]
     private Vector3 colliderPositionOffSet = new Vector3(0, 0, 0);
     [SerializeField, Tooltip("Set if the GameObject spawns on hit.")]
     private bool spawnOnEnter = false;
 
-    [Header("The first set of random rooms")]
-    [SerializeField] private GameObject[] randomSet1 = null;
-
-    [Header("The second set of random rooms")]
-    [SerializeField] private GameObject[] randomSet2 = null;
-
     //This variable keeps track of which room should be spawned
     private int roomCounter = 0;
 
-    private bool randomSpawn = false;
-    private int randomSetCounter = 0;
-
     private GameObject previouslySpawnedRoom = null;
-
-    private bool canExit = true;
-    //private StopRoomAdvance checkpoint; //The checkpoint that makes the whole room advance pause
-
-    private int frameCounter = 6;
 
 
     private void Awake()

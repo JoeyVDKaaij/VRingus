@@ -4,7 +4,7 @@ using UnityEngine;
 public class MovingObstacleSettings : ScriptableObject
 {
     [Header("Movement properties")]
-    [Range(-200, 200)]
+    [Range(-200, 0)]
     public float movementSpeed = 1.0f;
 
     public Direction direction = Direction.x;

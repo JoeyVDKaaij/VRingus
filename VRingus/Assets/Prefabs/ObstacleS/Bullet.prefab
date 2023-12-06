@@ -12,12 +12,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+      objectReference: {fileID: -1414876259844504243, guid: bd4badf807fe6884a8ffcfc265735d85,
+        type: 3}
     - target: {fileID: 3471067740350383732, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4347564943716343718, guid: db2efbac71507c54b94b413aaf4796a5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2844625453144190667, guid: bd4badf807fe6884a8ffcfc265735d85,
+        type: 3}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -110,10 +117,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8409885014473391065, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3474308522110884713}
-    - targetCorrespondingSourceObject: {fileID: 8409885014473391065, guid: db2efbac71507c54b94b413aaf4796a5,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: -5050144156146936273}
     - targetCorrespondingSourceObject: {fileID: 8409885014473391065, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
@@ -123,6 +126,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1706561930256079492}
+    - targetCorrespondingSourceObject: {fileID: 8409885014473391065, guid: db2efbac71507c54b94b413aaf4796a5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8356936844573196785}
   m_SourcePrefab: {fileID: 100100000, guid: db2efbac71507c54b94b413aaf4796a5, type: 3}
 --- !u!1 &1747934080005076791 stripped
 GameObject:
@@ -130,27 +137,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7850901236094160110}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &3474308522110884713
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747934080005076791}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-5050144156146936273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,3 +262,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &8356936844573196785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747934080005076791}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15146483, y: 0.5527172, z: 0.1440039}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -24,9 +24,12 @@ public class TriggerDoorAnimation : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.position) <= distanceToPlayer)
         {
-            Debug.Log("Opening door...");
-            animator.SetBool("DoorOpen", true);
-            doorIsOpen = true;
+            if (!doorIsOpen)
+            {
+                Debug.Log("Opening door...");
+                animator.SetBool("DoorOpen", true);
+                doorIsOpen = true;
+            }
         }
         else
         {

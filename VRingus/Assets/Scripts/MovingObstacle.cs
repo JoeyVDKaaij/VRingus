@@ -90,7 +90,7 @@ public class MovingObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = transform.position + new Vector3(0,0,colliderLength/2);
+        target = transform.position + new Vector3(0,0,colliderLength/2) + targetPositionOffset;
 
         float distance = Vector3.Distance(player.position, target);
   
@@ -120,7 +120,7 @@ public class MovingObstacle : MonoBehaviour
             float decelerationFactor = Mathf.Clamp01(distance / stoppingDistance);
             Deceleration(decelerationFactor);
 
-            if (decelerationFactor < 0.3)
+            if (decelerationFactor < 0.4)
             {
                 stopped = true;
                 if (sceneTransitionManager != null)

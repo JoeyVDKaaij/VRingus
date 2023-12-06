@@ -11,7 +11,7 @@ public class TriggerDoorAnimation : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
     // Start is called before the first frame update
     void Start()

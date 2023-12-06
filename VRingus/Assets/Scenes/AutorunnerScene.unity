@@ -1786,7 +1786,7 @@ PrefabInstance:
         type: 3}
       propertyPath: room.Array.data[1]
       value: 
-      objectReference: {fileID: 4866655629532788369, guid: 12202f5ff9d5ed947a688f9637115ddb,
+      objectReference: {fileID: 1884604645630452380, guid: 669fcea9a79d85c4ca62dffd5a7ea5c5,
         type: 3}
     - target: {fileID: 719576721414581985, guid: a94cb8cd0ef7ee0458ff1db081c93f60,
         type: 3}

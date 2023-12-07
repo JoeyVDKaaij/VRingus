@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4347564943716343718, guid: db2efbac71507c54b94b413aaf4796a5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ad53f1b8902ed94d8d36da85c389e92, type: 2}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 8409885014473391065, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_Name
-      value: ObstacleBase
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

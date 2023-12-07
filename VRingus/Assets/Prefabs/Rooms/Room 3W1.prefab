@@ -115,7 +115,7 @@ PrefabInstance:
     - target: {fileID: 6756482126721260210, guid: 69d185a6578a7c043b24928254cf8241,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.67
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6756482126721260210, guid: 69d185a6578a7c043b24928254cf8241,
         type: 3}
@@ -166,6 +166,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObstacleBase Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086186825720604333, guid: 69d185a6578a7c043b24928254cf8241,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086186825720604333, guid: 69d185a6578a7c043b24928254cf8241,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086186825720604333, guid: 69d185a6578a7c043b24928254cf8241,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

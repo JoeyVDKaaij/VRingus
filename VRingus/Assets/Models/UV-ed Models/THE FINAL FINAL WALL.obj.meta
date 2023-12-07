@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 209b824b9c781f241923b0c05f612ea9
+guid: 2aa22640b472ae34188e24b0948987e5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Blade_pCylinder60Mat
-    second: {fileID: 2100000, guid: 1b2d6f1a9208c2543a40f5fc0abb2f8b, type: 2}
+      name: separated_01_30_group1Mat
+    second: {fileID: 2100000, guid: 425b83d997a9f6042ab95ee9d2b106a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureEditorIsolateSelectSet_separated_01_30_group1Mat
+    second: {fileID: 2100000, guid: 425b83d997a9f6042ab95ee9d2b106a7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +45,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -95,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.5
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

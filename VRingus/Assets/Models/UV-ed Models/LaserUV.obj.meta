@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 4c0e44509600fd148a0a9e58f56ee014
+guid: ecb75b16fa358814cb2f22ac0fe9c19c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LaserPointerUV_p1Mat
+    second: {fileID: 2100000, guid: 76c45a739a43fd74ebfcab697ad7701a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

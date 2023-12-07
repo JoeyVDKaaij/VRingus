@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 209b824b9c781f241923b0c05f612ea9
+guid: 4ec4cbe40e1364f40bbbdfddf39b468f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Blade_pCylinder60Mat
-    second: {fileID: 2100000, guid: 1b2d6f1a9208c2543a40f5fc0abb2f8b, type: 2}
+      name: Puzzle1Mat
+    second: {fileID: 2100000, guid: c313c37c561e87745a609e4b66362a4d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -37,10 +37,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -95,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.5
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

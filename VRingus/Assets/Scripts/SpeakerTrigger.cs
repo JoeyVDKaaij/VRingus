@@ -12,7 +12,7 @@ public class SpeakerTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("MainCamera"))
+        if (source.clip != null && other.CompareTag("MainCamera"))
         {
             source.Play();
         }

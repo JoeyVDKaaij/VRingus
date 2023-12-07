@@ -3,7 +3,12 @@ guid: 8e684bdd6f614904a992ddb2db70e148
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ThinPipe1_pMat
+    second: {fileID: 2100000, guid: 368fc7057fe219f4db9489b130ba7156, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

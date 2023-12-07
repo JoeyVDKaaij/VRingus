@@ -3,7 +3,12 @@ guid: 6dc99f95130f0d74ba5d0b304da1c270
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ValveUV_pMat
+    second: {fileID: 2100000, guid: eb1ddf97c157ffa41aaf40c17ff09a54, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

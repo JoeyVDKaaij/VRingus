@@ -3,7 +3,12 @@ guid: 56775bb1f7cce3a49838334f1c1e7509
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DecorationFront_pMat
+    second: {fileID: 2100000, guid: 37fface63e1997948a59e6daeed395d9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

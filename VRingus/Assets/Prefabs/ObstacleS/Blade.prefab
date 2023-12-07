@@ -21,28 +21,43 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1b2d6f1a9208c2543a40f5fc0abb2f8b, type: 2}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4764107
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4764107
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4764107
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 27.1
       objectReference: {fileID: 0}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
@@ -57,7 +72,7 @@ PrefabInstance:
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5338155098378687993, guid: db2efbac71507c54b94b413aaf4796a5,
         type: 3}

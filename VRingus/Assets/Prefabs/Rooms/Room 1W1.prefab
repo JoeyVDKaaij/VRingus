@@ -961,6 +961,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3975172386127396583, guid: fdf214b1fdad0b54c86578b43f131686,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4795470357635271961, guid: fdf214b1fdad0b54c86578b43f131686,
         type: 3}
       propertyPath: m_audioClip
